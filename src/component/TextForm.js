@@ -6,16 +6,19 @@ export default function TextForm(props) {
         console.log("Button clicked");
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert('Convert to uppercase','success');
     }
     const handleLowerClick = () => {
         console.log("Button clicked");
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert('Convert to lowercase','success');
     }
     const handleClearClick = () => {
         console.log("Button clicked");
         let newText = '';
         setText(newText);
+        props.showAlert('text is cleared','Oops');
     }
     const handleOnChange = (event) => {
         console.log("handle Button clicked");
@@ -34,6 +37,7 @@ for (var i = 0; i < arr.length; i++) {
 
 const str2 = arr.join(" ");
         setText(str2);
+        props.showAlert('case capitalised','success');
     }
 
     return (
